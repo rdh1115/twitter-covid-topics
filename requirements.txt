@@ -1,0 +1,5 @@
+cohere
+tweepy
+pandas
+dotenv
+matplotlib
