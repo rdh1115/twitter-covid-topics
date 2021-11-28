@@ -5,7 +5,7 @@ def main():
 
     client = tweepy.Client(bearer_token='AAAAAAAAAAAAAAAAAAAAAMgCWQEAAAAAhD5zT%2F0CSz5%2FvBFYw6ONa8zhtEY%3DLuIyhyXTaPWIzJzRzRz6TIv1Jhq9uNYRY1km6X8hDHTSLO5faI')
 
-    query = '(covid OR covid19 OR COVID OR COVID19 OR quarantine OR pandemic OR vaccine OR vaccination) lang:en -is:retweet'
+    query = '(vaccine (covid OR covid19 OR pfizer OR moderna) OR coronavirus OR covid OR covid19 OR quarantine OR pandemic OR pfizer OR moderna) lang:en -is:retweet'
 
     tweets = client.search_recent_tweets(query=query, max_results=10)
     # print(tweets)
