@@ -7,14 +7,14 @@ def main():
 
     query = '(vaccine (covid OR covid19 OR pfizer OR moderna) OR coronavirus OR covid OR covid19 OR quarantine OR pandemic OR pfizer OR moderna) lang:en -is:retweet'
 
-    tweets = client.search_recent_tweets(query=query, max_results=10)
+    tweets = tweepy.Paginator(client.search_recent_tweets, query=query, max_results=100).flatten(limit=350)
     # print(tweets)
 
-    output_file = '../data/filtered_tweets.tsv'
+    output_file = '../data/filtered_tweets_day1.tsv'
 
     with open(output_file, 'w', encoding='utf-8', newline='') as file:
         writer=csv.writer(file, delimiter='\t')
-        for tweet in tweets.data:
+        for tweet in tweets:
             writer.writerow([tweet.id, tweet.text.replace('\n',' ').replace('\t', ' ')])
 
 if __name__ == '__main__':
