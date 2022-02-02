@@ -1,9 +1,6 @@
 # twitter-covid-topics
-comp598 final project
+COVID19 Discussions in Social Media
 
-overleaf report link:
-https://www.overleaf.com/7793648831ghgvshkrvfxq
-
-google drive idea link:
-https://docs.google.com/document/d/1q3qqkhO4S5EvX9eTdg0ewoqIukwCsnHtHLWxmjivUH4/edit?usp=sharing
-
+- Analyzed Twitter data to identify the primary topics discussed around COVID and the corresponding engagement and sentiment for each topic
+- Utilized the Twitter API to query over 1,000 tweets related to COVID
+- Collaborated with 2 other group members to build a comprehensive typology and annotate tweets for topic characterization and sentiment analysis
